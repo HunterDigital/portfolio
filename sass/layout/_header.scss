@@ -1,0 +1,127 @@
+.parallax {
+    position: relative;
+    height: 100vh;
+    /*background-image: url(../img/5warstwa.png); */
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    font-weight: 600;
+
+}
+
+.layer {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    &--1 {
+        background-image: url(../img/1warstwa.png);
+        z-index: -1;
+    }
+    
+    &--2 {
+        background-image: url(../img/2warstwa.png);
+        z-index: -2;
+    }
+    
+    &--3 {
+        background-image: url(../img/3warstwa.png);
+        z-index: -3;
+    }
+    
+    &--4 {
+        background-image: url(../img/5warstwa.png);
+        z-index: -4;
+    }
+}
+
+.starter {
+    display: block;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    padding: 1rem 2rem;
+    white-space: nowrap;
+    &:first-child {
+        margin-bottom: 3rem;
+    }
+    
+    &--first {
+        transform: translate(-50%, -170%);
+    }
+    
+    &--second {
+    }
+    
+    & span {
+        color: $color-primary;
+            font-weight: 600;
+
+    }
+}
+
+.viewwork {
+    color: $color-white;
+    display: block;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    font-size: 2rem;
+    right: 10rem;
+    bottom: 10rem;
+    white-space: nowrap;
+    
+    
+    &:hover, &:active, &:checked {
+        /*box-shadow: inset 0 -5px 0px 0px #00fff5; */
+        color: $color-primary;
+    }
+    
+    &::after, &::before {
+        content: '';
+        background: transparent;
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 80%;
+        
+        transition: all 0.3s;
+        
+        z-index: -1;
+        clip-path: polygon(0 0, 50% 30%, 100% 0, 100% 30%, 50% 60%, 0 30%);
+        -webkit-clip-path: polygon(0 0, 50% 30%, 100% 0, 100% 30%, 50% 60%, 0 30%);
+    }
+    
+    &::before {
+        width: 10rem;
+        height: 2rem;
+        transition-delay: .05s;
+        transform: translate(-50%, 50%);
+    }
+    
+    &:hover::before {
+        background: $color-primary;
+        transform: translate(-50% , 2rem);
+    }
+    
+    
+    &::after {
+        width: 5rem;
+        height: 1rem;
+        z-index: 2;
+        transition-delay: .02s;
+        transform: translate(-50%, 110%);
+    }
+    
+    
+    &:hover::after {
+        background: $color-white;
+        transform: translate(-50% , 3.5rem);
+    }
+}

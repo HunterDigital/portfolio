@@ -1,0 +1,56 @@
+.heading--primary {
+    display: block;
+    color: $color-white;
+    font-size: 3.5rem;
+    justify-content: center;
+    text-align: center;
+    font-weight: 600;
+}
+.heading--secondary {
+    margin: 0 50%;
+    transform: translateX(-50%);
+    width: 15rem;
+    font-size: 500%;
+    text-transform: uppercase;
+    padding: 0;
+    display: block;
+    text-align: center;
+    color: $color-tertiary;
+    font-weight: bold;
+    position: relative;
+    &::after {
+        content: '';
+        background-color: $color-tertiary;
+        display: block;
+        position: absolute;
+        margin: 0 10% 0 10%;
+        height: .5rem;
+        width: 80%;
+        bottom: -1.5rem;
+    }
+    &--white {
+        width: 35rem;
+    }
+}
+.second {
+    top: .3rem;
+    width: 25rem;
+    position: absolute;
+    z-index: 101;
+    font-size: 600%;
+    &::after {
+        display: none;
+    }
+}
+.heading--tertiary {
+    background-color: $color-tertiary;
+    display: inline-block;
+    padding: .2rem;
+    margin: 2rem 50%;
+    font-size: 2.5rem;
+    text-align: center;
+    color: $color-white;
+    transform: translate(-50%);
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, 75% 100%, 0% 100%);
+    clip-path: polygon(.7rem 0%, 100% 0%, calc(100% - .7rem) 100%, 0% 100%);    
+}

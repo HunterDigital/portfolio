@@ -1,0 +1,177 @@
+.portfolio {
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+
+    .gallery {
+        margin-top: 5rem;
+        height: 55rem;
+        background: #4cd137;
+        position: relative;
+        .heading {
+            height: 5rem;
+            width: 28rem;
+            background: $color-white;
+            left: 50%;
+            position: absolute;
+            transform: translateX(-50%);
+            -webkit-clip-path: polygon(0 0, 100% 0%, 7rem 100%, 0% 100%);
+                clip-path: polygon(0 0, 100% 0%, 90% 100%, 10% 100%);
+                z-index: 11;
+        }
+        .side {
+            position: absolute;
+            height: 100%;
+            width: 7rem;
+            height: 110%;
+            background: $color-secondary;
+            z-index: 10;
+            &__right {
+                right: 0;
+                -webkit-clip-path: polygon(7rem 0, 100% 0%, 100% 100%, 0% 100%);
+                clip-path: polygon(7rem 0, 100% 0%, 100% 100%, 0% 100%);
+                
+            }
+        }
+
+        .project {
+            position: absolute;
+            height: 25rem;
+            width: 65rem;
+            z-index: 11;
+            left: 15rem;
+            bottom: 4rem;
+            transition: background .3s;
+
+            &__name {
+                text-transform: uppercase;
+                text-align: left;
+                display: block;
+                font-size: 7rem;
+                font-weight: 800;
+                color: $color-white;
+            }
+
+            &__type {
+                margin-top: -15px;
+                text-transform: uppercase;
+                text-align: left;
+                display: block;
+                font-size: 2rem;
+                font-weight: 800;
+                color: $color-white;
+                margin-left: 8.4rem;
+            }
+
+            &__desc {
+                color: $color-white;
+                font-size: 2rem;
+                display: block;
+                position: absolute;
+                text-align: left;
+                bottom: 2rem;
+                line-height: 2.5rem;
+                background: #00940080;
+                padding: 1rem;
+                padding-left: 2.5rem;
+            }
+        }
+
+        &__5 {
+            position: absolute;
+            right: 0;
+            width: 11rem;
+            height: 105%;
+            background: #00a8ff;
+            -webkit-clip-path: polygon(7rem 0, 100% 0%, 100% 100%, 0% 100%);
+            clip-path: polygon(7rem 0, 100% 0%, 100% 100%, 0% 100%);
+            z-index: 9;
+            transition: background .3s;
+        }
+
+        &__4 {
+            position: absolute;
+            right: 0;
+            width: 15rem;
+            height: 105%;;
+            background: #9c88ff;
+            -webkit-clip-path: polygon(7rem 0, 100% 0%, 100% 100%, 0% 100%);
+            clip-path: polygon(7rem 0, 100% 0%, 100% 100%, 0% 100%);
+            z-index: 8;
+            transition: background .3s;
+        }
+
+        &__3 {
+            position: absolute;
+            right: 0;
+            width: 19rem;
+            height: 105%;
+            background: #e84118;
+            -webkit-clip-path: polygon(7rem 0, 100% 0%, 100% 100%, 0% 100%);
+            clip-path: polygon(7rem 0, 100% 0%, 100% 100%, 0% 100%);
+            z-index: 7;
+            transition: background .3s;
+        }
+
+        &__2 {
+            position: absolute;
+            right: 0;
+            width: 23rem;
+            height: 105%;
+            background: #fbc531;
+            -webkit-clip-path: polygon(7rem 0, 100% 0%, 100% 100%, 0% 100%);
+            clip-path: polygon(7rem 0, 100% 0%, 100% 100%, 0% 100%);
+            z-index: 6;
+            transition: background .3s;
+        }
+
+        .slider {
+            transition: all .3s;
+        }
+
+        .button {
+            position: absolute;
+            color: #292929;
+            z-index: 11;
+            font-size: 8rem;
+            bottom: 0;
+            overflow: hidden;
+            padding: -1rem -5rem;
+            transform: translate(-50%, -50%);
+            transition: color .3s;
+            border-radius: 70%;
+
+            &:hover {
+                color: $color-white;
+                cursor: pointer;
+            }
+        }
+
+        .back {
+            right: 40rem;
+            display: none;
+        }
+        .next {
+            right: 30rem;
+        }
+        .button__projectpreview {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #292929;
+            position: absolute;
+            z-index: 15;
+            right: 30rem;
+            top: 5rem;
+            padding: 1rem;
+            border: solid 3px #292929;
+            cursor: pointer;
+            transition: all 0.3s;
+            &:hover {
+                color: #fff;
+                background-color: #292929;
+            }
+        }
+    }
+
+    
+}
