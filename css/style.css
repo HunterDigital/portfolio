@@ -44,7 +44,10 @@ body, html {
     width: 80%;
     bottom: -1.5rem; }
   .heading--secondary--white {
-    width: 35rem; }
+    width: 35rem;
+    color: #fff; }
+    .heading--secondary--white::after {
+      background-color: #fff; }
 
 .second {
   top: .3rem;
@@ -585,4 +588,13 @@ body, html {
   height: 75rem;
   background: #102c36;
   margin-top: -5px;
-  padding: 5rem 10rem; }
+  padding: 5rem 10rem;
+  position: relative; }
+  .contact__askme {
+    color: #fff;
+    display: block;
+    left: 50%;
+    top: 20rem;
+    position: absolute;
+    transform: translateX(-50%);
+    font-size: 350%; }

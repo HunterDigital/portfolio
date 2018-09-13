@@ -30,6 +30,11 @@
     }
     &--white {
         width: 35rem;
+        color: $color-white;
+
+        &::after {
+            background-color: $color-white;
+        }
     }
 }
 .second {

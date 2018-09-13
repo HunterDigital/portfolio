@@ -3,4 +3,38 @@
     background: $color-secondary;
     margin-top: -5px;
     padding: 5rem 10rem;
+    position: relative;
+    &__askme {
+        color: $color-white;
+        display: block;
+        left: 50%;
+        top: 20rem;
+        position: absolute;
+        transform: translateX(-50%);
+        font-size: 350%;
+    }
+
+    &__form {
+
+    }
+
+    &__group {
+
+    }
+
+    &__input {
+        
+        &__input__label {
+
+        }
+    }
+
+    label {
+
+    }
+
+    &__submit {
+        
+    }
+    
 }
