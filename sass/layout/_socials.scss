@@ -1,6 +1,51 @@
 .socials {
     height: 22rem;
     background-color: darken($color-tertiary, 15%);
+    position: relative;
 
-    
+    .social_group {
+        width: 40rem;
+        height: 6rem;
+        display: grid;
+        position: absolute;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-column-gap: 4rem;
+        left: 50%;
+        top: 5rem;
+        transform: translateX(-50%);
+        .social {
+            width: 6rem;
+            font-size: 5rem;
+            overflow: hidden;
+            color: $color-white;
+            text-align: center;
+            padding: .5rem;
+            cursor: pointer;
+        }
+        .facebook {
+            background-color: #3b5998;
+        }
+        .google{
+            background-color: #DD4B39;
+        }
+        .github{
+            background-color: #333;
+        }   
+        .twitter{
+            background-color: #00aced;
+        }
+    }
+
+    .copyright {
+        color: $color-white;
+        font-size: 250%;
+        font-weight: 400;
+        left: 50%;
+        transform: translateX(-50%);
+        position: absolute;
+        bottom: 4.5rem;
+        span {
+            color: $color-primary;
+        }
+    }
 }

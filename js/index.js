@@ -69,11 +69,15 @@ $(window).scroll(()=>{
         {
             active_element = '.nav__portfolio';
             toggle_active(active_element);
+            $('.nav').addClass('under');
+            $('.nav__blank').addClass('nav--active');
         }
     if (($(document).scrollTop() > portfolioHeight))
         {
             active_element = '.nav__contact';
             toggle_active(active_element);
+            $('.nav').addClass('under');
+            $('.nav__blank').addClass('nav--active');
         }
     
     

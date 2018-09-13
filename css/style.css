@@ -589,7 +589,7 @@ body, html {
   height: 75rem;
   background: #102c36;
   margin-top: 0;
-  padding: 5rem 10rem;
+  padding: 10rem 10rem;
   position: relative; }
   .contact__askme {
     color: #fff;
@@ -663,4 +663,41 @@ body, html {
 
 .socials {
   height: 22rem;
-  background-color: #002330; }
+  background-color: #002330;
+  position: relative; }
+  .socials .social_group {
+    width: 40rem;
+    height: 6rem;
+    display: grid;
+    position: absolute;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 4rem;
+    left: 50%;
+    top: 5rem;
+    transform: translateX(-50%); }
+    .socials .social_group .social {
+      width: 6rem;
+      font-size: 5rem;
+      overflow: hidden;
+      color: #fff;
+      text-align: center;
+      padding: .5rem;
+      cursor: pointer; }
+    .socials .social_group .facebook {
+      background-color: #3b5998; }
+    .socials .social_group .google {
+      background-color: #DD4B39; }
+    .socials .social_group .github {
+      background-color: #333; }
+    .socials .social_group .twitter {
+      background-color: #00aced; }
+  .socials .copyright {
+    color: #fff;
+    font-size: 250%;
+    font-weight: 400;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    bottom: 4.5rem; }
+    .socials .copyright span {
+      color: #00fff5; }
