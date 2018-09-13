@@ -30,16 +30,16 @@ var windowWidth = window.innerWidth;
 var parallaxHeight = $('.parallax').height();
 var aboutHeight = parallaxHeight + $('.about').height() + $('.nav').height();
 var portfolioHeight = aboutHeight + $('.portfolio').height();
+var contactHeight = portfolioHeight + $('.contact').height();
 
 $( window ).resize(function() { //przy zmianie wymiarow okna aktualizuj wysokości
     parallaxHeight = $('.parallax').height();
     aboutHeight = parallaxHeight + $('.about').height() + $('.nav').height();
     portfolioHeight = aboutHeight + $('.portfolio').height();
+    contactHeight = portfolioHeight + $('.contact').height();
+
     windowWidth = window.innerWidth;
-    setTimeout(()=>{
-        console.log(`parallaxHeight to ${parallaxHeight}, a aboutHeight to ${aboutHeight}, portfolioHeight to ${portfolioHeight}, windows width is currently ${windowWidth}.`); 
-        console.log(``);
-    }, 1000);
+
 });
 console.log(`parallaxHeight to ${parallaxHeight}, a aboutHeight to ${aboutHeight}, portfolioHeight to ${portfolioHeight}, windows width is currently ${windowWidth}.`); 
 var active_element;
@@ -68,6 +68,11 @@ $(window).scroll(()=>{
     if (($(document).scrollTop() > aboutHeight) && ($(document).scrollTop() < portfolioHeight))
         {
             active_element = '.nav__portfolio';
+            toggle_active(active_element);
+        }
+    if (($(document).scrollTop() > portfolioHeight))
+        {
+            active_element = '.nav__contact';
             toggle_active(active_element);
         }
     
