@@ -598,3 +598,64 @@ body, html {
     position: absolute;
     transform: translateX(-50%);
     font-size: 350%; }
+  .contact__form {
+    position: absolute;
+    top: 30rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50rem; }
+  .contact__group:not(:last-child) {
+    margin-bottom: 3rem; }
+  .contact__input {
+    width: 100%;
+    font-size: 1.5rem;
+    padding: 1.5rem 2rem 1.5rem 1.2rem;
+    border: none;
+    border-left: 8px solid transparent;
+    background-color: #002330;
+    color: #fff;
+    font-family: inherit;
+    transition: border .3s;
+    z-index: 4;
+    resize: vertical;
+    max-height: 20rem;
+    min-height: 5rem; }
+    .contact__input--main {
+      height: 10rem; }
+    .contact__input:placeholder-shown + .contact__input__label {
+      opacity: 0;
+      margin-top: -2rem; }
+    .contact__input::placeholder {
+      color: #757575;
+      font-weight: 600; }
+    .contact__input:focus {
+      outline: none;
+      border-left: 8px solid #00fff5;
+      color: #00fff5; }
+    .contact__input:focus:invalid {
+      border-color: #ff5100; }
+    .contact__input__label {
+      color: #fff;
+      font-size: 1.2rem;
+      display: block;
+      position: absolute;
+      margin-top: .4rem;
+      transition: all .3s;
+      z-index: 3;
+      margin-left: 1.2rem; }
+  .contact__submit {
+    font-size: 1.6rem;
+    padding: 1.5rem 2rem;
+    right: 0;
+    display: block;
+    position: absolute;
+    background-color: #102c36;
+    border: 2px solid #00fff5;
+    color: #00fff5;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all .3s; }
+    .contact__submit:hover {
+      background-color: #00fff5;
+      color: #1d1d1d; }

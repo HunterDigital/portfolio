@@ -15,17 +15,66 @@
     }
 
     &__form {
-
+        position: absolute;
+        top: 30rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50rem;
     }
 
-    &__group {
-
+    &__group:not(:last-child) {
+        margin-bottom: 3rem;
     }
 
     &__input {
-        
-        &__input__label {
+        width: 100%;
+        font-size: 1.5rem;
+        padding: 1.5rem 2rem 1.5rem 1.2rem;
+        border: none;
+        border-left: 8px solid transparent;
+        background-color: darken($color-tertiary, 15%);
+        color: #fff;
+        font-family: inherit;
+        transition: border .3s;
+        z-index: 4;
+        resize: vertical;
+        max-height: 20rem;
+        min-height: 5rem;
 
+        &--main{
+            height: 10rem;
+        }
+
+        &:placeholder-shown + &__label{
+            opacity: 0;
+            margin-top: -2rem;
+        }
+
+        &::placeholder {
+            color: $color-light-grey;
+            font-weight: 600;
+        }
+
+        &:focus {
+            outline: none;
+            border-left: 8px solid $color-primary;
+            color: $color-primary;
+        }
+
+        &:focus:invalid {
+            border-color: $color-additional1;
+        }
+
+        &__label {
+            //position: absolute;
+            color: $color-white;
+            font-size: 1.2rem;
+            display: block;
+            position: absolute;
+            margin-top: .4rem;
+            transition: all .3s;
+            z-index: 3;
+            margin-left: 1.2rem;
         }
     }
 
@@ -34,7 +83,23 @@
     }
 
     &__submit {
-        
+        font-size: 1.6rem;
+        padding: 1.5rem 2rem;
+        right: 0;
+        display: block;
+        position: absolute;
+        background-color: $color-secondary;
+        border: 2px solid $color-primary;
+        color: $color-primary;
+        text-transform: uppercase;
+        cursor: pointer;
+        font-weight: 600;
+        transition: all .3s;
+
+        &:hover {
+            background-color: $color-primary;
+            color: $color-dark-grey;
+        }
     }
     
 }
