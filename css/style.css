@@ -220,6 +220,24 @@ body, html {
     background: #fff;
     transform: translate(-50%, 3.5rem); }
 
+@media screen and (max-width: 1000px) {
+  .layer {
+    display: none; }
+  .parallax {
+    background-image: url(../img/5warstwa.png); }
+  .parallax .heading--primary {
+    font-size: 450%; } }
+
+@media screen and (max-width: 600px) {
+  .parallax {
+    background-image: url(../img/5warstwa.png);
+    background-attachment: scroll; }
+  .viewwork {
+    right: 50%;
+    transform: translateX(50%); }
+  .parallax .heading--primary {
+    font-size: 350%; } }
+
 .nav {
   height: 5.35rem;
   background-color: #102c36;
@@ -267,9 +285,6 @@ body, html {
   padding: 10rem 20% 0 20%;
   height: auto;
   margin-bottom: 4rem; }
-  @media screen and (max-width: 1000px) {
-    .about {
-      padding: 10rem 0 0 0; } }
   .about__description {
     margin-top: 8rem;
     height: auto;
@@ -278,11 +293,18 @@ body, html {
     grid-column-gap: 1%; }
     @media screen and (max-width: 1400px) {
       .about__description {
-        grid-template-columns: 49% 49%;
-        grid-column-gap: 2%; } }
+        grid-template-columns: 1fr;
+        grid-column-gap: 30%; } }
+    @media screen and (max-width: 800px) {
+      .about__description {
+        grid-template-columns: 1fr;
+        grid-column-gap: 30%; } }
     .about__description__card {
       position: relative;
       padding: 1rem 2rem; }
+      @media screen and (max-width: 800px) {
+        .about__description__card {
+          margin: 0 auto; } }
       .about__description__card .circle {
         width: 8rem;
         height: 8rem;
@@ -319,10 +341,18 @@ body, html {
   .about .card--2 {
     grid-column-start: 2;
     grid-column-end: 2; }
+    @media screen and (max-width: 800px) {
+      .about .card--2 {
+        grid-column-start: 1;
+        grid-column-end: 1; } }
   .about .card--3 {
     grid-column-start: 3;
     grid-column-end: 3; }
     @media screen and (max-width: 1400px) {
+      .about .card--3 {
+        grid-column-start: 1;
+        grid-column-end: 1; } }
+    @media screen and (max-width: 800px) {
       .about .card--3 {
         grid-column-start: 1;
         grid-column-end: 1; } }
@@ -333,6 +363,10 @@ body, html {
       .about .card--4 {
         grid-column-start: 2;
         grid-column-end: 2; } }
+    @media screen and (max-width: 800px) {
+      .about .card--4 {
+        grid-column-start: 1;
+        grid-column-end: 1; } }
   .about .personal {
     margin: 5rem 0 5rem 0;
     height: 400px;
@@ -342,8 +376,13 @@ body, html {
     grid-template-rows: 100%; }
     @media screen and (max-width: 1400px) {
       .about .personal {
-        width: 90%;
-        margin: 5rem auto 5rem auto; } }
+        width: 130%;
+        margin: 5rem auto 5rem auto;
+        transform: translateX(-10%); } }
+    @media screen and (max-width: 800px) {
+      .about .personal {
+        -webkit-clip-path: none;
+        clip-path: none; } }
     .about .personal .left,
     .about .personal .right {
       height: 100%;
@@ -355,6 +394,10 @@ body, html {
       -webkit-clip-path: polygon(25% 0, 100% 0%, 100% 100%, 0% 100%);
       clip-path: polygon(25% 0, 100% 0%, 100% 100%, 0% 100%);
       overflow: hidden; }
+      @media screen and (max-width: 1000px) {
+        .about .personal .left {
+          -webkit-clip-path: none;
+          clip-path: none; } }
       .about .personal .left img {
         image-rendering: initial;
         transition: filter .5s; }
@@ -428,6 +471,10 @@ body, html {
           -webkit-clip-path: polygon(0 0, 100% 0%, calc(100% - 12px) 100%, 0% 100%);
           clip-path: polygon(0 0, 100% 0%, calc(100% - 12px) 100%, 0% 100%);
           height: 100%; }
+          @media screen and (max-width: 1000px) {
+            .about .personal .right .skillbar .progress {
+              -webkit-clip-path: none;
+              clip-path: none; } }
           .about .personal .right .skillbar .progress__1 {
             width: 90%; }
           .about .personal .right .skillbar .progress__2 {

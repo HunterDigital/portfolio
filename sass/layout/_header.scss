@@ -37,6 +37,7 @@
         background-image: url(../img/5warstwa.png);
         z-index: -4;
     }
+    
 }
 
 .starter {
@@ -125,3 +126,33 @@
         transform: translate(-50% , 3.5rem);
     }
 }
+
+@media screen and (max-width: 1000px) {
+    .layer {
+        display: none;
+    }
+    .parallax {
+        background-image: url(../img/5warstwa.png);
+    }
+    .parallax .heading--primary {
+        font-size: 450%;
+    }
+        
+}
+
+@media screen and (max-width: 600px) {
+    .parallax {
+        background-image: url(../img/5warstwa.png);
+        background-attachment: scroll;
+    }
+    .viewwork {
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    .parallax .heading--primary {
+        font-size: 350%;
+    }
+        
+}
+
